@@ -1,0 +1,47 @@
+.link {
+    font-size: 30px;
+}
+
+.profile{
+    width: 200px;
+    height: 120px;
+    display: block;
+    margin: 5px;
+}
+
+.container{
+    width: 100px;
+    height: 100px;
+    background: aqua;
+    margin: 5px;
+    /*padding: 3px;*/
+    border: 1px solid black;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.left-box{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: gray;
+}
+
+.right-box{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: greenyellow;
+    /*margin-right: -10px;*/
+}
+
+.footer{    /* float 속성 해제 */
+    clear: both;
+    float: none;
+}
