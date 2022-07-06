@@ -1,0 +1,71 @@
+.content{
+    width: 60vw;
+    float: left;
+    margin: 1vw;
+}
+
+.profile{
+    /*width: 40vw;*/
+    display: inline;
+    margin: 1vw;
+}
+
+.profile_img{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 3vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 0.5vw;
+}
+
+.profile_img img{
+    width: 6vw;
+    height: auto;
+    margin-left: -2vw;
+}
+
+.profile_text{
+    display: inline-block;
+}
+
+.nickname {
+    font-size: 11pt;
+    display: inline;
+    color: #4C4C4C;
+}
+
+.time{
+    font-size: 8pt;
+    margin-top: -0.1vh;
+    color: gray
+}
+
+.image{
+    width: 25vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    float: right;
+    margin: 1vw;
+    margin-right: 2vw;
+}
+
+.image img{
+    width: 30vw;
+    height: auto;
+    margin-left: -1.5vw;
+}
+
+.text{
+    font-size: 10pt;
+    color: gray;
+}
+
+.share{
+    width: 1.5vw;
+    float: right;
+    filter: opacity(40%)
+}
