@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAF6F6;
+}
+
+.containerLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 45vw;
+    flex-direction: column;
+}
+
+.containerCenter{
+    width: 0.4vw;
+    height: 80vh;
+    background-color: #F47C7C;
+}
+
+.containerRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 54.6vw;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 250px;
+}
+
+.basicProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textCategory{
+    margin-bottom: -2vh;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-weight: bold;
+    font-size: 16px;    /* default 인 듯 */
+}
+
+.textContent{
+    margin-bottom: -2vh;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 16px;
+}
+
+.t {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 0.5px;
+}
+
+@media screen and (max-width : 768px) {
+    .photo {
+        width: 200px;
+    }
+    .textCategory {
+        font-size : 12px;
+    }
+    .textContent { 
+      font-size : 12px; 
+    }
+  } 
