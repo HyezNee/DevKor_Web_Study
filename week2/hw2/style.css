@@ -1,0 +1,24 @@
+.head{
+    font-weight: bold;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) { /* tablet */
+    /* 더 이상 테이블 속성이 아니도록 */
+    tr {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 768px) {  /* mobile */ 
+    thead, tbody, th, td, tr {
+        display: block;
+    }
+    td{
+        padding: 5px;
+    }
+}
