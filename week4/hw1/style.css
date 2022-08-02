@@ -1,0 +1,17 @@
+.wordunderbar0, .wordunderbar1, .wordunderbar2, .wordunderbar3, .wordunderbar4, .wordunderbar5,
+.wordunderbar6, .wordunderbar7, .wordunderbar8, .wordunderbar9, .wordunderbar10
+{
+    display: none;
+}
+
+.c0, .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 28px;
+    display: none;
+    fill: #2A6EFF;
+    font-weight: bold;
+}
+
+.guillotine1, .guillotine2, .guillotine3, .guillotine4, .head, .body, .arm1, .arm2, .leg1, .leg2, .guillotine5 {
+    display: none;
+}
