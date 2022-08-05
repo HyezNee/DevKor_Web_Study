@@ -2,6 +2,7 @@
 import {useState} from "react";
 import './App.css';
 import proImg from './newjeans.png';
+import {Modal} from './components/modal'
 
 function App() {
   /*
@@ -11,11 +12,12 @@ function App() {
   const [postTitle, changePostTitle] = useState(["남자 코트 추천", "강남 우동 맛집", "파이썬독학"]);
   postTitle.sort();
   const [genderFlag, changeGenderFlag] = useState(true);
+  const [titleText, changeTitleText] = useState('');
 
   const clickTitle = () => {
     window.location.href = 'http://localhost:3000/';
   }
-
+  /*
   const clickFunc = (e) => {  // {
     // e.preventDefault();  // a 태그에만 적용
     let copy = [...postTitle];  // deep copy
@@ -26,7 +28,7 @@ function App() {
     changePostTitle(copy);
     changeGenderFlag(!genderFlag);
     // console.log(genderFlag);
-  }
+  }*/
 
   const modifyTitle = (e, idx) => {
     let copy = [...postTitle];
@@ -50,26 +52,40 @@ function App() {
           <img src={proImg} />
         </div>
       </div>
-      <div className="post">
-        <h3 className="postTitle">{postTitle[0]}</h3>
-        <p>2월 17일 발행</p>
-        <button onClick={clickFunc}>Click!</button>
-        <br></br>
-        <button onClick={(e)=>{modifyTitle(e, 0)}}>글 수정</button>
-      </div>
-      <hr className="underline" />
-      <div className="post">
-        <h3 className="postTitle">{postTitle[1]}</h3>
-        <p>2월 17일 발행</p>
-        <button onClick={(e)=>{modifyTitle(e, 1)}}>글 수정</button>
-      </div>
-      <hr className="underline" />
-      <div className="post">
-        <h3 className="postTitle">{postTitle[2]}</h3>
-        <p>2월 17일 발행</p>
-        <button onClick={(e)=>{modifyTitle(e, 2)}}>글 수정</button>
-      </div>
-      <hr className="underline" />
+      {
+        postTitle.map((item, idx) => {
+          return (
+            <div>
+              <div className="post">
+                <h3 className="postTitle">{item}</h3>
+                <p>2월 17일 발행</p>
+                {/*<button onClick={clickFunc}>Click!</button>
+                <br></br>*/}
+                <button onClick={(e)=>{modifyTitle(e, idx)}}>글 수정</button>
+                <button onClick={()=>{
+                  let copy = [...postTitle];
+                  copy.splice(idx, 1);
+                  console.log(copy);
+                  changePostTitle(copy);
+                }}>글 삭제</button>
+            </div>
+          <hr className="underline" />
+          </div>)
+        })
+      }
+      <Modal postTitle={postTitle} changePostTitle={changePostTitle}></Modal>
+      <input onChange = {(e) => {
+        /*let copy = [...postTitle];
+        copy.push(e.target.value);*/
+        // let context = '';
+        console.log(e.target.value);
+        changeTitleText(e.target.value);
+      }} />
+      <button onClick={()=>{
+        let copy = [...postTitle];
+        copy.push(titleText);  // 깊은 복사 안했는데 이렇게 해도 되려나?
+        changePostTitle(copy);
+      }}>추가</button>
     </div>
   );
 }
